@@ -1,0 +1,290 @@
+
+.contenedor{
+    margin-left             : 5rem;
+    margin-right            : 5rem ;
+    display                 : grid;
+    grid-template-columns   : repeat(5,22.4rem);
+    grid-template-rows      : repeat(11,10rem);    
+    max-width: 100%;
+
+    grid-template-areas: 
+    " barra barra barra barra barra "
+    " hero  hero hero hero hero "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " item-1  item-2 item-2 item-2 item-2  "
+    " footer footer footer footer footer "
+    " footer footer footer footer footer "
+    ;
+
+    @include respond(tablet-v){
+        grid-template-areas: 
+        " barra barra barra  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " footer footer footer "
+        " footer footer footer "
+        ;        
+       }
+
+    @include respond(telefono){
+        grid-template-areas: 
+        " barra barra "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " footer footer "
+        " footer footer "
+        ;        
+       }
+
+    & .barra{   
+    grid-area: barra; 
+    display: flex;  
+    list-style: none;
+    font-size: 2rem;  
+    margin: 3rem;
+
+    & li{
+
+    }
+    & a{
+    text-decoration: none;
+    margin: 2rem;
+
+    }
+    }
+
+    & .hero{
+    grid-area: hero;   
+    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;  
+    background-blend-mode: color-burn;
+
+    
+
+    }
+    & .item-1{
+    grid-area: item-1;  
+    display: flex;  
+    flex-flow: column;
+    overflow: auto;
+    }
+    & .item-2{
+    grid-area: item-2;    
+    }
+    & .item-3{
+    grid-area: item-3;    
+    }
+    & .item-4{
+    grid-area: item-4;    
+    }
+    & .item-5{
+    grid-area: item-5;    
+    }
+    & .item-6{
+    grid-area: item-6;    
+    }
+    & .footer{
+        display: flex;
+        grid-area: footer;
+        background-color: black;
+
+        & .elemento{
+            margin-left: 5rem; 
+            & img{
+                border-radius: 50%;
+                width: 12rem;
+                margin: 3rem;
+            }
+        }
+
+        & h6{
+            color: white;
+            margin: 2rem;
+            font-size: 2rem;
+        }
+        & p{
+            color: white;
+            margin: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+
+.contenedor2{
+    margin-left             : 1rem;
+    margin-right            : 1rem ;
+    display                 : grid;
+    grid-template-columns   : repeat(5,22.4rem);
+    grid-template-rows      : repeat(9,10rem);    
+    max-width: 100%;
+
+    grid-template-areas: 
+    " barra barra barra barra barra "
+    " hero hero hero hero hero "
+    " hero hero hero hero hero "
+    " hero hero hero hero hero "
+    " item-1 item-1 item-1 item-1 item-1"
+    " item-1 item-1 item-1 item-1 item-1"
+    " item-1 item-1 item-1 item-1 item-1"
+    " item-1 item-1 item-1 item-1 item-1"
+    " item-1 item-1 item-1 item-1 item-1"
+    " footer footer footer footer footer "
+    " footer footer footer footer footer "
+    ;
+
+    @include respond(tablet-v){
+        grid-template-areas: 
+        " barra barra barra  "
+        " hero hero hero   "
+        " hero hero hero   "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " hero hero hero  "
+        " item-1 item-1 item-1  "
+        " item-1 item-1 item-1  "
+        " item-1 item-1 item-1  "
+        " footer footer footer "
+        " footer footer footer  "
+ 
+ 
+        ;        
+       }
+
+    @include respond(telefono){
+        grid-template-areas: 
+        " barra barra  "
+        " hero hero  "
+        " hero hero   "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " hero hero "
+        " item-1 item-1"
+        " item-1 item-1"
+        " item-1 item-1"
+        " item-1 item-1"
+        " footer footer "
+        " footer footer   "
+        " footer footer   "
+        ;        
+       }
+
+    & .barra{   
+    grid-area: barra; 
+    display: flex;  
+    list-style: none;
+    font-size: 2rem;  
+    margin: 3rem;
+
+    & li{
+    }
+    & a{
+    text-decoration: none;
+    margin: 2rem;
+    }
+    }
+
+    & .hero{
+    display: flex; 
+    flex-wrap: wrap;   
+    grid-area: hero;   
+    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;  
+    background-blend-mode: color-burn;
+    }
+    & .item-1{
+    grid-area: item-1;    
+    & p{
+   
+        font-size: 1.9rem;
+        margin: 3%;
+        margin-left: 10%;
+    }
+    }
+    & .item-2{
+    grid-area: item-2;    
+    }
+    & .item-3{
+    grid-area: item-3;    
+    }
+    & .item-4{
+    grid-area: item-4;    
+    }
+    & .item-5{
+    grid-area: item-5;    
+    }
+    & .item-6{
+    grid-area: item-6;    
+    }
+    & .footer{
+        display: flex;
+        grid-area: footer;
+        background-color: black;
+
+        & .elemento{
+            margin-left: 5rem; 
+            & img{
+                border-radius: 50%;
+                width: 12rem;
+                margin: 3rem;
+            }
+        }
+
+        & h6{
+            color: white;
+            margin: 2rem;
+            font-size: 2rem;
+        }
+        & p{
+            color: white;
+            margin: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+//$ termine
+//* contenga
+//^=comience
+[class^="item-"]{
+border: 1rem;    
+border-color: black;
+
+}
+    

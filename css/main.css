@@ -1,0 +1,203 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'sans-serif', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000; }
+
+.contenedor {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 22.4rem);
+  grid-template-rows: repeat(11, 10rem);
+  max-width: 100%;
+  grid-template-areas: " barra barra barra barra barra " " hero  hero hero hero hero " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " footer footer footer footer footer " " footer footer footer footer footer "; }
+  @media only screen and (max-width: 56.25em) {
+    .contenedor {
+      grid-template-areas: " barra barra barra  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " footer footer footer " " footer footer footer "; } }
+  @media only screen and (max-width: 37.5em) {
+    .contenedor {
+      grid-template-areas: " barra barra " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " footer footer " " footer footer "; } }
+  .contenedor .barra {
+    grid-area: barra;
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    margin: 3rem; }
+    .contenedor .barra a {
+      text-decoration: none;
+      margin: 2rem; }
+  .contenedor .hero {
+    grid-area: hero;
+    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: color-burn; }
+  .contenedor .item-1 {
+    grid-area: item-1;
+    display: flex;
+    flex-flow: column;
+    overflow: auto; }
+  .contenedor .item-2 {
+    grid-area: item-2; }
+  .contenedor .item-3 {
+    grid-area: item-3; }
+  .contenedor .item-4 {
+    grid-area: item-4; }
+  .contenedor .item-5 {
+    grid-area: item-5; }
+  .contenedor .item-6 {
+    grid-area: item-6; }
+  .contenedor .footer {
+    display: flex;
+    grid-area: footer;
+    background-color: black; }
+    .contenedor .footer .elemento {
+      margin-left: 5rem; }
+      .contenedor .footer .elemento img {
+        border-radius: 50%;
+        width: 12rem;
+        margin: 3rem; }
+    .contenedor .footer h6 {
+      color: white;
+      margin: 2rem;
+      font-size: 2rem; }
+    .contenedor .footer p {
+      color: white;
+      margin: 2rem;
+      font-size: 1.5rem; }
+
+.contenedor2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 22.4rem);
+  grid-template-rows: repeat(9, 10rem);
+  max-width: 100%;
+  grid-template-areas: " barra barra barra barra barra " " hero hero hero hero hero " " hero hero hero hero hero " " hero hero hero hero hero " " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " footer footer footer footer footer " " footer footer footer footer footer "; }
+  @media only screen and (max-width: 56.25em) {
+    .contenedor2 {
+      grid-template-areas: " barra barra barra  " " hero hero hero   " " hero hero hero   " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " item-1 item-1 item-1  " " item-1 item-1 item-1  " " item-1 item-1 item-1  " " footer footer footer " " footer footer footer  "; } }
+  @media only screen and (max-width: 37.5em) {
+    .contenedor2 {
+      grid-template-areas: " barra barra  " " hero hero  " " hero hero   " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " item-1 item-1" " item-1 item-1" " item-1 item-1" " item-1 item-1" " footer footer " " footer footer   " " footer footer   "; } }
+  .contenedor2 .barra {
+    grid-area: barra;
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    margin: 3rem; }
+    .contenedor2 .barra a {
+      text-decoration: none;
+      margin: 2rem; }
+  .contenedor2 .hero {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: hero;
+    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: color-burn; }
+  .contenedor2 .item-1 {
+    grid-area: item-1; }
+    .contenedor2 .item-1 p {
+      font-size: 1.9rem;
+      margin: 3%;
+      margin-left: 10%; }
+  .contenedor2 .item-2 {
+    grid-area: item-2; }
+  .contenedor2 .item-3 {
+    grid-area: item-3; }
+  .contenedor2 .item-4 {
+    grid-area: item-4; }
+  .contenedor2 .item-5 {
+    grid-area: item-5; }
+  .contenedor2 .item-6 {
+    grid-area: item-6; }
+  .contenedor2 .footer {
+    display: flex;
+    grid-area: footer;
+    background-color: black; }
+    .contenedor2 .footer .elemento {
+      margin-left: 5rem; }
+      .contenedor2 .footer .elemento img {
+        border-radius: 50%;
+        width: 12rem;
+        margin: 3rem; }
+    .contenedor2 .footer h6 {
+      color: white;
+      margin: 2rem;
+      font-size: 2rem; }
+    .contenedor2 .footer p {
+      color: white;
+      margin: 2rem;
+      font-size: 1.5rem; }
+
+[class^="item-"] {
+  border: 1rem;
+  border-color: black; }
+
+.tarjetas {
+  margin: 3%;
+  -webkit-perspective: 800;
+  perspective: 800; }
+  .tarjetas .tarjeta {
+    margin-left: 8rem;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px black;
+    width: 20rem;
+    height: 25rem;
+    transform-style: preserve-3d;
+    transition: 2s ease; }
+    .tarjetas .tarjeta img {
+      margin: 5%;
+      background-size: contain;
+      background-color: aliceblue;
+      width: 90%;
+      height: 60%; }
+  .tarjetas .lado-a, .tarjetas .lado-b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .tarjetas .lado-a {
+    background: green; }
+    .tarjetas .lado-a p {
+      font-size: 2rem;
+      text-align: center; }
+  .tarjetas .lado-b {
+    transform: rotateY(180deg);
+    background: greenyellow; }
+    .tarjetas .lado-b p {
+      font-size: 1.5rem;
+      margin: 5%;
+      margin-top: 20%; }
+  .tarjetas:hover .tarjeta {
+    transform: rotateY(180deg); }

@@ -1,0 +1,14 @@
+// abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// base 
+
+@import "base/base";
+@import "base/typography";
+
+
+
+//layouts
+@import 'layouts/grid';
+@import 'abstracts/componentes';
