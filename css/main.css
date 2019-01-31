@@ -32,10 +32,10 @@ body {
   margin-left: 5rem;
   margin-right: 5rem;
   display: grid;
-  grid-template-columns: repeat(5, 22.4rem);
-  grid-template-rows: repeat(11, 10rem);
+  grid-template-columns: repeat(5, 26.4rem);
+  grid-template-rows: repeat(15, 10rem);
   max-width: 100%;
-  grid-template-areas: " barra barra barra barra barra " " hero  hero hero hero hero " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " footer footer footer footer footer " " footer footer footer footer footer "; }
+  grid-template-areas: " barra barra barra barra barra " " hero  hero hero hero hero " " hero  hero hero hero hero " " hero  hero hero hero hero " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " footer footer footer footer footer " " footer footer footer footer footer "; }
   @media only screen and (max-width: 56.25em) {
     .contenedor {
       grid-template-areas: " barra barra barra  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " footer footer footer " " footer footer footer "; } }
@@ -53,16 +53,23 @@ body {
       margin: 2rem; }
   .contenedor .hero {
     grid-area: hero;
-    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
+    background: rgba(60, 194, 48, 0.3) url(/imagenes/programming.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
     background-blend-mode: color-burn; }
   .contenedor .item-1 {
     grid-area: item-1;
     display: flex;
     flex-flow: column;
     overflow: auto; }
+    .contenedor .item-1 a {
+      font-size: 1rem;
+      margin: 3%;
+      margin-left: 10%;
+      cursor: pointer; }
+      .contenedor .item-1 a:hover {
+        background-color: yellow; }
   .contenedor .item-2 {
     grid-area: item-2; }
   .contenedor .item-3 {
@@ -126,10 +133,6 @@ body {
     background-blend-mode: color-burn; }
   .contenedor2 .item-1 {
     grid-area: item-1; }
-    .contenedor2 .item-1 p {
-      font-size: 1.9rem;
-      margin: 3%;
-      margin-left: 10%; }
   .contenedor2 .item-2 {
     grid-area: item-2; }
   .contenedor2 .item-3 {
