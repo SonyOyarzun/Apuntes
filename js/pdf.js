@@ -39,3 +39,31 @@ function herrS(embed){
         document.getElementById("embed1").src="documentos/HERRAMIENTAS_S.O/Samba.pdf";
     }
 }
+
+function baseDatos(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/Apuntes Sol1.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/Insertar.pdf";
+    }
+    if(embed==2){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/xmlselect.pdf";
+    }
+    if(embed==3){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/Mostrar xml en tabla de una ruta específica.pdf";
+    }
+    if(embed==4){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/Informe XML.pdf";
+    }
+    if(embed==5){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/Informe Solemne 3 BD2.pdf";
+    }
+    if(embed==6){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/ES_XQuery.pdf";
+    }
+    if(embed==7){
+        document.getElementById("embed1").src="documentos/BASE_DE_DATOS/XPath_2.pdf";
+    }
+}
