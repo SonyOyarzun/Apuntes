@@ -67,3 +67,59 @@ function baseDatos(embed){
         document.getElementById("embed1").src="documentos/BASE_DE_DATOS/XPath_2.pdf";
     }
 }
+
+function appMov(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/APLICACIONES_MOVILES/Apuntes 1.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="documentos/APLICACIONES_MOVILES/Apuntes 2.pdf";
+    }
+    if(embed==2){
+        document.getElementById("embed1").src="documentos/APLICACIONES_MOVILES/Apuntes 3.pdf";
+    }
+    if(embed==3){
+        document.getElementById("embed1").src="documentos/APLICACIONES_MOVILES/Apuntes 4 BBDD.pdf";
+    }
+}
+
+function estruc(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/ESTRUCTURA_DE_DATOS/TAREA CALIDAD DOBLEENLACE.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="documentos/ESTRUCTURA_DE_DATOS/RECORRIDO ARBOLES BINARIOS.pdf";
+    }
+    if(embed==2){
+        document.getElementById("embed1").src="documentos/ESTRUCTURA_DE_DATOS/Crear un árbol a partir de dos ordenamientos dados_.pdf";
+    }
+
+}
+
+function diseñoWeb(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/DISEÑO_WEB/VisualCode.pdf";
+    }
+}
+
+function ingles(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/INGLES/Apuntes-Ingles Sol1.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="documentos/INGLES/Apuntes Sol2 Ingles.pdf";
+    }
+    if(embed==2){
+        document.getElementById("embed1").src="documentos/INGLES/Apuntes Sol 3.pdf";
+    }
+    if(embed==3){
+        document.getElementById("embed1").src="documentos/INGLES/Presente Continuo.pdf";
+    }
+    if(embed==4){
+        document.getElementById("embed1").src="documentos/INGLES/VerbosIrregulares.pdf";
+    }
+}
