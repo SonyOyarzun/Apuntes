@@ -12,6 +12,42 @@ $breakpoint arguement choices:
 ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
+.triangulo {
+  border-style: solid;
+  border-width: 18px;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; }
+  .triangulodiv {
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0; }
+  .triangulo.derecha {
+    right: 1%;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.4); }
+    .triangulo.derechadiv {
+      border-color: transparent transparent transparent white; }
+  .triangulo.izquierda {
+    left: 1%;
+    border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent; }
+    .triangulo.izquierdadiv {
+      border-color: transparent white transparent transparent; }
+  .triangulo.arriba {
+    border-color: black transparent transparent transparent; }
+    .triangulo.arribadiv {
+      border-color: white transparent transparent transparent;
+      top: -21px;
+      left: -10px; }
+  .triangulo.abajo {
+    border-color: transparent transparent black transparent; }
+    .triangulo.abajodiv {
+      border-color: transparent transparent white transparent;
+      top: 1px;
+      left: -10px; }
+
 *,
 *::after,
 *::before {
@@ -23,17 +59,33 @@ html {
   font-size: 62.5%; }
 
 body {
+  background-image: url(); }
+
+body {
   font-family: 'sans-serif', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #000; }
 
+body video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -10;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); }
+
 .contenedor {
   margin-left: 5rem;
   margin-right: 5rem;
   display: grid;
-  grid-template-columns: repeat(5, 26.4rem);
+  grid-template-columns: repeat(5, 24rem);
   grid-template-rows: repeat(15, 10rem);
+  grid-row-gap: 2%;
+  grid-column-gap: 2.5%;
   max-width: 100%;
   grid-template-areas: " barra barra barra barra barra " " hero  hero hero hero hero " " hero  hero hero hero hero " " hero  hero hero hero hero " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " footer footer footer footer footer " " footer footer footer footer footer "; }
   @media only screen and (max-width: 56.25em) {
@@ -48,18 +100,30 @@ body {
     list-style: none;
     font-size: 2rem;
     margin: 3rem; }
+    .contenedor .barra li {
+      background-color: aliceblue; }
     .contenedor .barra a {
       text-decoration: none;
-      margin: 2rem; }
+      margin: 4rem; }
   .contenedor .hero {
+    background-color: aliceblue;
+    position: relative;
     grid-area: hero;
-    background: rgba(60, 194, 48, 0.3) url(/imagenes/programming.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-blend-mode: color-burn; }
+    .contenedor .hero video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat; }
   .contenedor .item-1 {
     grid-area: item-1;
+    background-color: aliceblue;
     display: flex;
     flex-flow: column;
     overflow: auto; }
@@ -71,7 +135,8 @@ body {
       .contenedor .item-1 a:hover {
         background-color: yellow; }
   .contenedor .item-2 {
-    grid-area: item-2; }
+    grid-area: item-2;
+    background-color: aliceblue; }
   .contenedor .item-3 {
     grid-area: item-3; }
   .contenedor .item-4 {
@@ -95,69 +160,6 @@ body {
       margin: 2rem;
       font-size: 2rem; }
     .contenedor .footer p {
-      color: white;
-      margin: 2rem;
-      font-size: 1.5rem; }
-
-.contenedor2 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: grid;
-  grid-template-columns: repeat(5, 22.4rem);
-  grid-template-rows: repeat(9, 10rem);
-  max-width: 100%;
-  grid-template-areas: " barra barra barra barra barra " " hero hero hero hero hero " " hero hero hero hero hero " " hero hero hero hero hero " " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " item-1 item-1 item-1 item-1 item-1" " footer footer footer footer footer " " footer footer footer footer footer "; }
-  @media only screen and (max-width: 56.25em) {
-    .contenedor2 {
-      grid-template-areas: " barra barra barra  " " hero hero hero   " " hero hero hero   " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " item-1 item-1 item-1  " " item-1 item-1 item-1  " " item-1 item-1 item-1  " " footer footer footer " " footer footer footer  "; } }
-  @media only screen and (max-width: 37.5em) {
-    .contenedor2 {
-      grid-template-areas: " barra barra  " " hero hero  " " hero hero   " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " item-1 item-1" " item-1 item-1" " item-1 item-1" " item-1 item-1" " footer footer " " footer footer   " " footer footer   "; } }
-  .contenedor2 .barra {
-    grid-area: barra;
-    display: flex;
-    list-style: none;
-    font-size: 2rem;
-    margin: 3rem; }
-    .contenedor2 .barra a {
-      text-decoration: none;
-      margin: 2rem; }
-  .contenedor2 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    grid-area: hero;
-    background: rgba(60, 194, 48, 0.3) url(/imagenes/CIELO.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    background-blend-mode: color-burn; }
-  .contenedor2 .item-1 {
-    grid-area: item-1; }
-  .contenedor2 .item-2 {
-    grid-area: item-2; }
-  .contenedor2 .item-3 {
-    grid-area: item-3; }
-  .contenedor2 .item-4 {
-    grid-area: item-4; }
-  .contenedor2 .item-5 {
-    grid-area: item-5; }
-  .contenedor2 .item-6 {
-    grid-area: item-6; }
-  .contenedor2 .footer {
-    display: flex;
-    grid-area: footer;
-    background-color: black; }
-    .contenedor2 .footer .elemento {
-      margin-left: 5rem; }
-      .contenedor2 .footer .elemento img {
-        border-radius: 50%;
-        width: 12rem;
-        margin: 3rem; }
-    .contenedor2 .footer h6 {
-      color: white;
-      margin: 2rem;
-      font-size: 2rem; }
-    .contenedor2 .footer p {
       color: white;
       margin: 2rem;
       font-size: 1.5rem; }

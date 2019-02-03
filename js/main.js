@@ -11,3 +11,4 @@ function loadScript(url, callback){
 }
 
 loadScript('js/pdf.js','pdf');
+loadScript('js/flechas.js','flechas');

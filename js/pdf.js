@@ -1,4 +1,5 @@
-//http://rogerdudler.github.io/git-guide/index.es.html-->
+//http://rogerdudler.github.io/git-guide/index.es.html
+//https://github.com/cmusatyalab/openface
 function appWeb(embed){
    
     if(embed==0){
