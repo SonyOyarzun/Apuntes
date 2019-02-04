@@ -2,6 +2,19 @@ body{
 
 }
 main{
+
+#boton{
+    display: none;
+    @include respond(telefono){
+        display: inline;
+        position: absolute;
+        top: 0;
+        height: 5rem;
+        background-color: aquamarine;
+        width: 100%;
+    }
+}    
+
 display: grid;
 grid-template-columns   : 100%;
 grid-template-rows      : 5rem 50rem 120rem 35rem; 
@@ -23,17 +36,45 @@ grid-template-areas:
         font-size: 2rem;  
         margin: 0;
         align-items: center;
+ 
+        & ul{
+        display: flex;
+        list-style: none;
+        @include respond(telefono){
+        flex-flow: column;
+        width: 100%;
+        height: 5rem;
+        }
+            & li{  
+  
+                @include respond(telefono){
+                    position: relative;
+                    background-color: aquamarine;
+                    width: 100%;
+                    top:5rem;
+                    cursor: pointer;
+                    display: none;
+                    transition: none 6s ease-out;
+                   
+                }
+            }
+            & a{
+            text-decoration: none;
+            margin: 4rem;
+            cursor: pointer;
+            }
+        }
         
-        & li{
-     //   background-color: rgba(255, 255,255, 0.5);
-     //   border-radius: 1%;  
-     //   border: 3px red ridge;      
-        }
-        & a{
-        text-decoration: none;
-        margin: 4rem;
-    
-        }
+        
+        
+        @include respond(telefono){
+            flex-flow: column;
+            width: 100%;
+            margin: 0 0 20px;
+            background-color: blue;
+            height: 0;
+            z-index: 1;
+           }
         }
     
 & img{ 
