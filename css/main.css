@@ -168,27 +168,29 @@ main {
         font-family: 'Monster'; }
   main .footer {
     position: relative;
-    display: flex;
-    flex-flow: column;
     grid-area: footer;
     background-color: rgba(0, 0, 0, 0.9); }
-    main .footer .elemento {
-      margin-left: 5rem; }
-      main .footer .elemento img {
-        border-radius: 50%;
-        width: 12rem;
-        margin: 3rem; }
     main .footer h6 {
       color: white;
       margin: 2rem;
       font-size: 2rem; }
-    main .footer p {
-      color: white;
-      margin: 2rem;
-      font-size: 1.5rem; }
-      main .footer p img {
-        width: 10px;
-        height: 10px; }
+    main .footer .elemento {
+      display: flex;
+      position: relative;
+      margin-left: 2rem;
+      width: 5rem;
+      height: 5rem; }
+      main .footer .elemento img {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%; }
+      main .footer .elemento p {
+        position: relative;
+        top: 20%;
+        color: white;
+        margin-left: 2rem;
+        font-size: 1.5rem; }
   @media only screen and (max-width: 56.25em) {
     main {
       grid-template-columns: 90rem;
