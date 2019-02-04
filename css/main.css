@@ -17,6 +17,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   border-width: 18px;
   width: 0;
   height: 0;
+  z-index: 1;
   cursor: pointer;
   position: absolute;
   top: 50%; }
@@ -29,7 +30,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     right: 1%;
     border-color: transparent transparent transparent rgba(0, 0, 0, 0.4); }
     .triangulo.derechadiv {
-      border-color: transparent transparent transparent white; }
+      border-color: transparent transparent transparent red; }
   .triangulo.izquierda {
     left: 1%;
     border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent; }
@@ -48,6 +49,33 @@ ORDER: Base + typography > general layout + grid > page layout > components
       top: 1px;
       left: -10px; }
 
+#slider {
+  animation-name: hero;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  content: url(/imagenes/Git.png);
+  /*
+    animation: hero 4s infinite
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    */
+  grid-area: header;
+  transition: all 1s;
+  background-position: center; }
+
+@keyframes hero {
+  from {
+    content: url(/imagenes/Git.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  to {
+    src: url(/imagenes/Git.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; } }
+
 *,
 *::after,
 *::before {
@@ -65,68 +93,116 @@ body {
   font-family: 'sans-serif', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #000; }
+  color: black; }
 
-body video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: -10;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%); }
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5rem 50rem 120rem 35rem;
+  grid-row-gap: 0%;
+  grid-column-gap: 2.5%;
+  max-width: 100%;
+  grid-template-areas: " barra " " hero " " cont " " footer "; }
+  main .barra {
+    grid-area: barra;
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    margin: 0;
+    align-items: center; }
+    main .barra li {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 1%;
+      border: 3px red ridge; }
+    main .barra a {
+      text-decoration: none;
+      margin: 4rem; }
+  main img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%); }
+  main video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -10;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); }
+  main .hero {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    grid-area: hero;
+    background: rgba(197, 65, 42, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color-burn; }
+    main .hero video {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+    main .hero img {
+      position: absolute;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  main .footer {
+    display: flex;
+    grid-area: footer;
+    background-color: black; }
+    main .footer .elemento {
+      margin-left: 5rem; }
+      main .footer .elemento img {
+        border-radius: 50%;
+        width: 12rem;
+        margin: 3rem; }
+    main .footer h6 {
+      color: white;
+      margin: 2rem;
+      font-size: 2rem; }
+    main .footer p {
+      color: white;
+      margin: 2rem;
+      font-size: 1.5rem; }
 
 .contenedor {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  grid-area: cont;
+  background-color: white;
+  margin: 0;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(5, 24rem);
-  grid-template-rows: repeat(15, 10rem);
+  grid-template-rows: repeat(10, 10rem);
   grid-row-gap: 2%;
   grid-column-gap: 2.5%;
   max-width: 100%;
-  grid-template-areas: " barra barra barra barra barra " " hero  hero hero hero hero " " hero  hero hero hero hero " " hero  hero hero hero hero " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " footer footer footer footer footer " " footer footer footer footer footer "; }
+  grid-template-areas: " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  "; }
   @media only screen and (max-width: 56.25em) {
     .contenedor {
       grid-template-areas: " barra barra barra  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " hero hero hero  " " footer footer footer " " footer footer footer "; } }
   @media only screen and (max-width: 37.5em) {
     .contenedor {
       grid-template-areas: " barra barra " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " hero hero " " footer footer " " footer footer "; } }
-  .contenedor .barra {
-    grid-area: barra;
-    display: flex;
-    list-style: none;
-    font-size: 2rem;
-    margin: 3rem; }
-    .contenedor .barra li {
-      background-color: aliceblue; }
-    .contenedor .barra a {
-      text-decoration: none;
-      margin: 4rem; }
-  .contenedor .hero {
-    background-color: aliceblue;
-    position: relative;
-    grid-area: hero;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: color-burn; }
-    .contenedor .hero video {
-      position: absolute;
-      min-width: 100%;
-      min-height: 100%;
-      width: 100%;
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat; }
   .contenedor .item-1 {
     grid-area: item-1;
-    background-color: aliceblue;
+    overflow: auto;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
-    flex-flow: column;
-    overflow: auto; }
+    flex-flow: column; }
     .contenedor .item-1 a {
       font-size: 1rem;
       margin: 3%;
@@ -136,7 +212,9 @@ body video {
         background-color: yellow; }
   .contenedor .item-2 {
     grid-area: item-2;
-    background-color: aliceblue; }
+    background-color: rgba(255, 255, 255, 0); }
+    .contenedor .item-2 embed {
+      height: 95%; }
   .contenedor .item-3 {
     grid-area: item-3; }
   .contenedor .item-4 {
@@ -145,24 +223,6 @@ body video {
     grid-area: item-5; }
   .contenedor .item-6 {
     grid-area: item-6; }
-  .contenedor .footer {
-    display: flex;
-    grid-area: footer;
-    background-color: black; }
-    .contenedor .footer .elemento {
-      margin-left: 5rem; }
-      .contenedor .footer .elemento img {
-        border-radius: 50%;
-        width: 12rem;
-        margin: 3rem; }
-    .contenedor .footer h6 {
-      color: white;
-      margin: 2rem;
-      font-size: 2rem; }
-    .contenedor .footer p {
-      color: white;
-      margin: 2rem;
-      font-size: 1.5rem; }
 
 [class^="item-"] {
   border: 1rem;

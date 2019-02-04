@@ -1,0 +1,35 @@
+
+#slider{
+    animation-name: hero;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    content: url(/imagenes/Git.png);
+    /*
+    animation: hero 4s infinite
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    */
+    grid-area: header;
+    transition: all 1s;
+   // box-shadow: 0px 0px 5px black;
+    background-position: center;
+
+    }
+    
+@keyframes hero{
+from{
+    content: url(/imagenes/Git.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+to{
+    src: url(/imagenes/Git.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        }

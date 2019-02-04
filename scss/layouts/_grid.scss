@@ -1,5 +1,52 @@
 body{
-& video{
+
+}
+main{
+display: grid;
+grid-template-columns   : 100%;
+grid-template-rows      : 5rem 50rem 120rem 35rem; 
+grid-row-gap: 0%;   
+grid-column-gap: 2.5%;   
+max-width: 100%;
+
+grid-template-areas: 
+    " barra "
+    " hero "
+    " cont "
+    " footer "
+    ;
+
+    & .barra{   
+        grid-area: barra; 
+        display: flex;  
+        list-style: none;
+        font-size: 2rem;  
+        margin: 0;
+        align-items: center;
+        
+    
+        & li{
+        background-color: rgba(255, 255,255, 0.5);
+        border-radius: 1%;  
+        border: 3px red ridge;
+           
+        }
+        & a{
+        text-decoration: none;
+        margin: 4rem;
+    
+        }
+        }
+    
+& img{ 
+  position: absolute;
+  top: 50%; left: 50%;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+& video{ 
   position: fixed;
   top: 50%; left: 50%;
   z-index: -10;
@@ -8,24 +55,73 @@ body{
   width: auto;
   height: auto;
   transform: translate(-50%, -50%);
+    }   
+
+    & .hero{ 
+        background-color: rgba(255, 255,255, 0.5);
+        position: relative;    
+        grid-area: hero;   
+        background: rgba(197, 65, 42, 0.3);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;  
+        background-blend-mode: color-burn;
+            & video{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+            & img{
+                position: absolute;
+                cursor: pointer;
+                @include centrar;
+                height: 100%;
+                background-size: cover;
+                background-repeat:no-repeat;
+            }
+        
+        }
+
+    & .footer{
+        display: flex;
+        grid-area: footer;
+        background-color: black;
+
+        & .elemento{
+            margin-left: 5rem; 
+            & img{
+                border-radius: 50%;
+                width: 12rem;
+                margin: 3rem;
+            }
+        }
+
+        & h6{
+            color: white;
+            margin: 2rem;
+            font-size: 2rem;
+        }
+        & p{
+            color: white;
+            margin: 2rem;
+            font-size: 1.5rem;
+        }
     }
 }
 
 .contenedor{
-    margin-left             : 5rem;
-    margin-right            : 5rem ;
+    grid-area: cont;
+    background-color: white;
+    margin: 0;
+    padding: 2rem;
     display                 : grid;
     grid-template-columns   : repeat(5,24rem);
-    grid-template-rows      : repeat(15,10rem); 
+    grid-template-rows      : repeat(10,10rem); 
     grid-row-gap: 2%;   
     grid-column-gap: 2.5%;   
     max-width: 100%;
 
     grid-template-areas: 
-    " barra barra barra barra barra "
-    " hero  hero hero hero hero "
-    " hero  hero hero hero hero "
-    " hero  hero hero hero hero "
     " item-1  item-2 item-2 item-2 item-2  "
     " item-1  item-2 item-2 item-2 item-2  "
     " item-1  item-2 item-2 item-2 item-2  "
@@ -35,8 +131,7 @@ body{
     " item-1  item-2 item-2 item-2 item-2  "
     " item-1  item-2 item-2 item-2 item-2  "
     " item-1  item-2 item-2 item-2 item-2  "
-    " footer footer footer footer footer "
-    " footer footer footer footer footer "
+    " item-1  item-2 item-2 item-2 item-2  "
     ;
 
     @include respond(tablet-v){
@@ -74,49 +169,16 @@ body{
         ;        
        }
 
-    & .barra{   
-    grid-area: barra; 
-    display: flex;  
-    list-style: none;
-    font-size: 2rem;  
-    margin: 3rem;
 
-    & li{
-        background-color: aliceblue;
-    }
-    & a{
-    text-decoration: none;
-    margin: 4rem;
-
-    }
-    }
-
-    & .hero{
-    background-color: aliceblue;
-    position: relative;    
-    grid-area: hero;   
-    //background: rgba(60, 194, 48, 0.3) url(/imagenes/programming.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;  
-    background-blend-mode: color-burn;
-        & video{
-            position: absolute;
-            min-width: 100%;
-            min-height: 100%;
-            width: 100%;
-            height: 100%;
-            background-size: contain;
-            background-repeat:no-repeat;
-        }
-    
-    }
     & .item-1{
-    grid-area: item-1;  
-    background-color: aliceblue;
+    grid-area: item-1;
+    overflow: auto;
+
+    height: 95%;
+
+    background-color: rgba(255, 255,255, 0.8);
     display: flex;  
     flex-flow: column;
-    overflow: auto;
     & a{
         font-size: 1rem;
         margin: 3%;
@@ -129,7 +191,10 @@ body{
     }
     & .item-2{
     grid-area: item-2; 
-    background-color: aliceblue;   
+    background-color: rgba(255, 255,255, 0);  
+     & embed{
+         height: 95%;
+     }
     }
     & .item-3{
     grid-area: item-3;    
@@ -143,31 +208,7 @@ body{
     & .item-6{
     grid-area: item-6;    
     }
-    & .footer{
-        display: flex;
-        grid-area: footer;
-        background-color: black;
-
-        & .elemento{
-            margin-left: 5rem; 
-            & img{
-                border-radius: 50%;
-                width: 12rem;
-                margin: 3rem;
-            }
-        }
-
-        & h6{
-            color: white;
-            margin: 2rem;
-            font-size: 2rem;
-        }
-        & p{
-            color: white;
-            margin: 2rem;
-            font-size: 1.5rem;
-        }
-    }
+    
 }
 
 

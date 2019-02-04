@@ -1,5 +1,6 @@
 //http://rogerdudler.github.io/git-guide/index.es.html
 //https://github.com/cmusatyalab/openface
+//https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS
 function appWeb(embed){
    
     if(embed==0){
