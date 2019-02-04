@@ -24,12 +24,10 @@ grid-template-areas:
         margin: 0;
         align-items: center;
         
-    
         & li{
-        background-color: rgba(255, 255,255, 0.5);
-        border-radius: 1%;  
-        border: 3px red ridge;
-           
+     //   background-color: rgba(255, 255,255, 0.5);
+     //   border-radius: 1%;  
+     //   border: 3px red ridge;      
         }
         & a{
         text-decoration: none;
@@ -61,31 +59,56 @@ grid-template-areas:
         background-color: rgba(255, 255,255, 0.5);
         position: relative;    
         grid-area: hero;   
-        background: rgba(197, 65, 42, 0.3);
+        background: rgba(255, 0, 0, 0.2);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;  
         background-blend-mode: color-burn;
+        
+        & .header{
+            position: absolute;
+            @include centrar;
+            //border-radius: 1%;  
+            //border: 3px red ridge;     
+
+            width: 60rem;
+            height: 20rem;
             & video{
-                position: absolute;
                 height: 100%;
                 width: 100%;
             }
             & img{
-                position: absolute;
-                cursor: pointer;
-                @include centrar;
                 height: 100%;
-                background-size: cover;
-                background-repeat:no-repeat;
+                width: 100%; 
             }
+            & p{
+                
+                /* Primer resplandor */
+               // text-shadow: 0px 0px 10px #FFF,
+                /* Parte de luz */
+              //  4px 2px 12px #DCB500,
+               // -4px 2px 12px #DCB500,
+                /* Subida del fuego */
+              //  0px -6px 14px #FF7A00,
+              //  0px -12px 14px #FF6300,
+              //  0px -20px 14px #FF4400,
+                /* Azuleo de la llama */
+              //  0px -30px 14px #0A7BFF;
+                
+                font-size: 10rem;
+                font-family:'Monster';
+            }
+        }
+            
         
         }
 
     & .footer{
+        position: relative;
         display: flex;
+        flex-flow: column;
         grid-area: footer;
-        background-color: black;
+        background-color:rgba(0, 0,0,0.9);
 
         & .elemento{
             margin-left: 5rem; 
@@ -105,8 +128,25 @@ grid-template-areas:
             color: white;
             margin: 2rem;
             font-size: 1.5rem;
+            & img{
+             
+                width: 10px;
+                height: 10px;
+            }
         }
+        
     }
+
+    @include respond(tablet-v){
+        grid-template-columns: 90rem;  
+        grid-template-rows      : 5rem 40rem 62rem 25rem; 
+       }
+
+    @include respond(telefono){
+        grid-template-columns: 60rem; 
+        grid-template-rows      : 5rem 35rem 120rem 25rem; 
+  
+       }
 }
 
 .contenedor{
@@ -135,37 +175,29 @@ grid-template-areas:
     ;
 
     @include respond(tablet-v){
+        grid-template-columns   : 23rem 30rem 30rem;
+        grid-template-rows      : repeat(10,5rem); 
         grid-template-areas: 
-        " barra barra barra  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " hero hero hero  "
-        " footer footer footer "
-        " footer footer footer "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+        " item-1  item-2 item-2 "
+
         ;        
        }
 
     @include respond(telefono){
+        grid-template-columns   : 27rem 27rem;
+        grid-template-rows      : 35rem 80rem;
         grid-template-areas: 
-        " barra barra "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " hero hero "
-        " footer footer "
-        " footer footer "
+        " item-1 item-1 "
+        " item-2 item-2 "
         ;        
        }
 
@@ -179,6 +211,8 @@ grid-template-areas:
     background-color: rgba(255, 255,255, 0.8);
     display: flex;  
     flex-flow: column;
+
+    box-shadow: 8px 8px 8px black;
     & a{
         font-size: 1rem;
         margin: 3%;
@@ -194,6 +228,7 @@ grid-template-areas:
     background-color: rgba(255, 255,255, 0);  
      & embed{
          height: 95%;
+         box-shadow: 8px 8px 8px black;
      }
     }
     & .item-3{
