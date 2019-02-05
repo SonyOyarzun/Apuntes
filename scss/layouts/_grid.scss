@@ -4,14 +4,12 @@ body{
 main{
 
 #boton{
+    position: relative;
     display: none;
-
-    grid-area: boton;
 
     & button{
         position: absolute;
         right: 0;
-        width: 98%;
         height: 4rem;
         border-radius: 4px;
         font-size: 3rem;

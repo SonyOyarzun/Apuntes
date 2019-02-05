@@ -196,12 +196,11 @@ main {
   max-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
   main #boton {
-    display: none;
-    grid-area: boton; }
+    position: relative;
+    display: none; }
     main #boton button {
       position: absolute;
       right: 0;
-      width: 98%;
       height: 4rem;
       border-radius: 4px;
       font-size: 3rem;
