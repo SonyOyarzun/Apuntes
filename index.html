@@ -15,22 +15,15 @@
 <body>
     <main>
             <video id="bg" autoplay muted loop src="video/Zombies.mp4"></video>
-       
-           <!-- <input id="menu" type="checkbox">-->
-             
-           <!---
-            <div class="accordion-container">
-            <a href="#" class="accordion-titulo">Cristiano<span class="toggle-icon"></span></a>
-            <div class="accordion-content"></div>
--->      
-        
-        <label id="boton" for="menu"></label>
+         
+ 
+        <label id="boton" for="menu"><button for="menu" onclick="visibilidad()"> <button class="bubbly-button" onclick="visibilidad()">Indice</button> </button></label>
         <input id="menu" type="checkbox" style="display: none">
-        <div class="barra">
+        <div  class="barra">
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Programacion</a></li>
-                <li><a href="">Sonido</a></li>    
+                <li onclick="ref(1)">Inicio</li>
+                <li onclick="ref(2)">Programacion</li>
+                <li onclick="ref(3)">Sonido</li>    
             </ul> 
         </div>
                  
@@ -104,13 +97,21 @@
 
      </div>   
      <div class="footer">
-
+<div class="columna">
         <h6>Contacto</h6>
         <div class="elemento"> <img src="imagenes/facebook.jpg" alt=""> <p>Sony&nbsp;Oyarzun</p></div>
-       
         <div class="elemento"> <img src="imagenes/whatsapp.jpg" alt=""> <p>9&nbsp;980&nbsp;194&nbsp;82</p></div> 
+        <div class="elemento"> <img src="imagenes/correo.jpg" alt=""> <p>sony.oyarzun@gmail.com</p></div>
+</div>
+<div class="columna">
+        <h6>Tutoriales Externos</h6>
+        <div class="elemento"> <img src="imagenes/github.jpg" alt=""> <a href="http://rogerdudler.github.io/git-guide/index.es.html">Git&nbsp;Hub</a></div>
+        <div class="elemento"> <img src="imagenes/IA.jpg" alt="">  <a href="https://github.com/cmusatyalab/openface">Open&nbsp;Face</a></div> 
+        <div class="elemento"> <img src="imagenes/css.jpg" alt=""> <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS">Animaciones&nbsp;Css</a></div>
+</div>
+        
+
        
-        <div class="elemento"> <img src="imagenes/correo.jpg" alt=""> <p>sony.oyarzun.lopez@ciisa.cl</p></div>
         
      </div>
     </main>

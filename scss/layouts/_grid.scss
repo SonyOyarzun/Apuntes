@@ -5,12 +5,29 @@ main{
 
 #boton{
     display: none;
+    & button{
+        position: absolute;
+        right: 0;
+        margin: 0.4rem;
+        width: 100%;
+        height: 4rem;
+        border-radius: 4px;
+        font-size: 3rem;
+        z-index: 2;
+
+        box-shadow: 0 0 20px #4f9;
+        & img{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+        }
+    }
     @include respond(telefono){
         display: inline;
         position: absolute;
         top: 0;
         height: 5rem;
-        background-color: aquamarine;
+        background-color: rgba(0, 0,0,0.1);
         width: 100%;
     }
 }    
@@ -33,7 +50,7 @@ grid-template-areas:
         grid-area: barra; 
         display: flex;  
         list-style: none;
-        font-size: 2rem;  
+        font-size: 2rem;
         margin: 0;
         align-items: center;
  
@@ -44,24 +61,44 @@ grid-template-areas:
         flex-flow: column;
         width: 100%;
         height: 5rem;
+
+        & :hover{
+            background-color: rgba(0, 0,0,1);
+            box-shadow: 0 0 20px #4f9;
+            transition: 1s;
+        }
+
         }
             & li{  
-  
+                margin: 4rem;
+                cursor: pointer;
+                color: blueviolet;
                 @include respond(telefono){
                     position: relative;
-                    background-color: aquamarine;
+                    text-align: center;
                     width: 100%;
+                    height: 5rem;
                     top:5rem;
                     cursor: pointer;
                     display: none;
-                    transition: none 6s ease-out;
-                   
+              
+                    background-color: rgba(0, 0,0,0.6);
+                    font-size: 3rem;
+                    color: white;
+                    margin: 0;
+
+                    & :hover{
+                        background-color: rgba(0, 0,0,1);
+                        box-shadow: 0 0 0 black;
+                        transition: 8s;
+                    }
                 }
             }
             & a{
             text-decoration: none;
             margin: 4rem;
             cursor: pointer;
+            color: white;
             }
         }
         
@@ -149,34 +186,54 @@ grid-template-areas:
         grid-area: footer;
         background-color:rgba(0, 0,0,0.9);
 
-        & h6{
-            color: white;
-            margin: 2rem;
-            font-size: 2rem;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      //  align-content: space-between;
+        
+
+
+        & .columna{
+            size: 0.5%;
+            & h6{
+                color: white;
+                margin: 2rem;
+                font-size: 2rem;
+            }
+    
+            & .elemento{
+            display: flex;
+            position: relative;   
+            margin-left: 2rem; 
+           // border-radius: 1%;  
+           // border: 3px red ridge;
+            width: 5rem;
+            height: 5rem;
+                & img{
+                    position: relative;
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                }
+                & p{
+                    position: relative;
+                    top: 20%;
+                    color: white;
+                    margin-left: 2rem;
+                    font-size: 1.5rem;
+                }
+                & a{
+                    position: relative;
+                    top: 20%;
+                    color: white;
+                    margin-left: 2rem;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+            }
         }
 
-        & .elemento{
-        display: flex;
-        position: relative;   
-        margin-left: 2rem; 
-       // border-radius: 1%;  
-       // border: 3px red ridge;
-        width: 5rem;
-        height: 5rem;
-            & img{
-                position: relative;
-                border-radius: 50%;
-                width: 100%;
-                height: 100%;
-            }
-            & p{
-                position: relative;
-                top: 20%;
-                color: white;
-                margin-left: 2rem;
-                font-size: 1.5rem;
-            }
-        }
         
     }
 
@@ -256,13 +313,29 @@ grid-template-areas:
     flex-flow: column;
 
     box-shadow: 8px 8px 8px black;
+
+    @include respond(telefono){
+      //  align-items: center;
+    }
+    & h3{
+        color: black;
+        @include respond(telefono){
+            font-size: 2.5rem;
+        }
+     }
+
     & a{
         font-size: 1rem;
         margin: 3%;
         margin-left: 10%;
         cursor: pointer;
+        color: blueviolet;
+        @include respond(telefono){
+            font-size: 2rem;
+        }
         &:hover{
-            background-color: yellow;    
+            box-shadow: 0 0 20px rgba(201, 221, 22, 0.5); ;  
+            background-color: rgba(201, 221, 22, 0.5); 
         }
         }
     }

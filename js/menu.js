@@ -1,18 +1,16 @@
-$(function(){
-    $(".accordion-titulo").click(function(e){
-             
-          e.preventDefault();
-      
-          var contenido=$(this).next(".accordion-content");
-  
-          if(contenido.css("display")=="none"){ //open		
-            contenido.slideDown(250);			
-            $(this).addClass("open");
-          }
-          else{ //close		
-            contenido.slideUp(250);
-            $(this).removeClass("open");	
-          }
-  
-        });
-  });
+function visibilidad(){
+  var validar = document.getElementById('menu').checked;
+
+if( validar === false){
+  document.getElementById('menu').checked =true;
+}else{
+  document.getElementById('menu').checked =false;
+}
+}
+
+function ref(local){
+  if(local==1){
+    location.href = "https://www.google.com/";
+  }
+ 
+}
