@@ -195,9 +195,10 @@ main {
   grid-column-gap: 2.5%;
   max-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
+  main label {
+    width: 100%; }
   main #boton {
     position: absolute;
-    display: none;
     width: 100%; }
     main #boton button {
       position: absolute;
