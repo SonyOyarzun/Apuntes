@@ -25,7 +25,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin respond($breakpoint) {
 
     @if $breakpoint == telefono {
-        @media only screen and (max-width: 37.5em) {@content}; //600px
+      //  @media only screen and (max-width: 37.5em) {@content}; //600px
+          @media only screen and (max-width: 43.75em) {@content}; //700px
     }
     @if $breakpoint == tablet-v {
         @media only screen and (max-width: 56.25em) {@content}; //900px
