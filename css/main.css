@@ -195,9 +195,12 @@ main {
   grid-column-gap: 2.5%;
   max-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
+  main label {
+    width: 100%; }
   main #boton {
     position: relative;
-    display: none; }
+    display: none;
+    border: 3px red ridge; }
     main #boton button {
       position: absolute;
       right: 0;

@@ -2,11 +2,16 @@ body{
 
 }
 main{
+& label{
+    width: 100%;
+}
 
 #boton{
     position: relative;
     display: none;
+ //   width: 100%;
 
+     border: 3px red ridge;  
     & button{
         position: absolute;
         right: 0;
