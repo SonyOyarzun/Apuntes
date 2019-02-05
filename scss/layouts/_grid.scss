@@ -147,8 +147,8 @@ grid-template-areas:
             position: absolute;
             @include centrar;
             //border-radius: 1%;  
-            //border: 3px red ridge;     
-
+            //border: 3px red ridge;   
+         
             width: 60rem;
             height: 20rem;
             & video{
@@ -175,6 +175,7 @@ grid-template-areas:
                 
                 font-size: 10rem;
                 font-family:'Monster';
+    
             }
         }
             
