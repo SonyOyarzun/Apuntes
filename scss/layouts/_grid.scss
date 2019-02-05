@@ -5,6 +5,9 @@ main{
 
 #boton{
     display: none;
+
+    grid-area: boton;
+
     & button{
         position: absolute;
         right: 0;
