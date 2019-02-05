@@ -196,19 +196,20 @@ main {
   max-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
   main label {
-    width: 100%; }
-  main #boton {
-    position: relative;
-    display: none;
+    width: 100%;
     border: 3px red ridge; }
+  main #boton {
+    position: absolute;
+    display: none; }
     main #boton button {
       position: absolute;
       right: 0;
-      height: 4rem;
+      height: 5rem;
       border-radius: 4px;
       font-size: 3rem;
       z-index: 2;
-      box-shadow: 0 0 20px #4f9; }
+      box-shadow: 0 0 20px #4f9;
+      width: 100%; }
       main #boton button img {
         position: absolute;
         width: 50%;
@@ -228,11 +229,15 @@ main {
     font-size: 2rem;
     margin: 0;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      main .barra {
+        display: block; } }
     main .barra ul {
       display: flex;
       list-style: none; }
       @media only screen and (max-width: 37.5em) {
         main .barra ul {
+          display: inline;
           flex-flow: column;
           width: 100%;
           height: 5rem; }
