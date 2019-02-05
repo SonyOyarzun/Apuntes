@@ -222,8 +222,15 @@ main {
         top: 0;
         height: 5rem;
         background-color: rgba(0, 0, 0, 0.1);
-        width: 100%;
-        display: none; } }
+        width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    main {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5rem 50rem 120rem 35rem;
+      grid-row-gap: 0%;
+      grid-column-gap: 2.5%;
+      grid-template-areas: " barra " " hero " " cont " " footer "; } }
   main .barra {
     grid-area: barra;
     display: flex;
