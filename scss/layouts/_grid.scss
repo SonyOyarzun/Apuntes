@@ -8,8 +8,7 @@ main{
     & button{
         position: absolute;
         right: 0;
-        margin: 0.4rem;
-        width: 100%;
+        width: 98%;
         height: 4rem;
         border-radius: 4px;
         font-size: 3rem;
@@ -175,7 +174,10 @@ grid-template-areas:
                 
                 font-size: 10rem;
                 font-family:'Monster';
-    
+                @include respond(telefono){
+                    @include centrar;
+                    font-size: 5rem;
+                }  
             }
         }
             
