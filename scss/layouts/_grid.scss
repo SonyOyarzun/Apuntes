@@ -56,9 +56,10 @@ grid-template-areas:
     
             width: 100%;
 
-            display: none;
+            
+         //   display: none;
             @include respond(telefono){
-                display: block;
+              //  display: block;
                 position: absolute;
                 top: 0;
                 height: 5rem;

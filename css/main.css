@@ -221,11 +221,9 @@ main {
       font-size: 3rem;
       z-index: 2;
       box-shadow: 0 0 20px #4f9;
-      width: 100%;
-      display: none; }
+      width: 100%; }
       @media only screen and (max-width: 37.5em) {
         main .barra button {
-          display: block;
           position: absolute;
           top: 0;
           height: 5rem;
