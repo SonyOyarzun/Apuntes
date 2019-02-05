@@ -32,6 +32,9 @@ grid-template-areas:
             ;
                
        }
+
+       
+
     & .barra{   
         grid-area: barra;
         display: flex;  
@@ -138,12 +141,18 @@ grid-template-areas:
         }
     
 & img{ 
-  position: absolute;
-  top: 50%; left: 50%;
-  z-index: 0;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+   display: none;
+    @include respond(telefono){
+        display: block;
+        position: fixed;
+        top: 50%; left: 50%;
+        z-index: -10;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+       }
 }
 & video{ 
   position: fixed;

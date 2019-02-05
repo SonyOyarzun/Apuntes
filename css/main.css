@@ -283,13 +283,19 @@ main {
         height: 0;
         z-index: 1; } }
   main img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%); }
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      main img {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: -10;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%); } }
   main video {
     position: fixed;
     top: 50%;
