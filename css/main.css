@@ -205,7 +205,6 @@ main {
       grid-template-areas: " barra " " hero " " cont " " footer "; } }
   main .barra {
     grid-area: barra;
-    position: fixed;
     display: flex;
     list-style: none;
     font-size: 2rem;
@@ -222,14 +221,14 @@ main {
       font-size: 3rem;
       z-index: 2;
       box-shadow: 0 0 20px #4f9;
-      width: 100%; }
+      width: 100%;
+      display: none; }
       @media only screen and (max-width: 37.5em) {
         main .barra button {
           display: block;
           position: absolute;
           top: 0;
           height: 5rem;
-          background-color: rgba(0, 0, 0, 0.1);
           width: 100%; } }
       main .barra button img {
         position: absolute;

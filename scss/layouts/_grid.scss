@@ -34,7 +34,6 @@ grid-template-areas:
        }
     & .barra{   
         grid-area: barra;
-        position: fixed; 
         display: flex;  
         list-style: none;
         font-size: 2rem;
@@ -57,15 +56,14 @@ grid-template-areas:
     
             width: 100%;
 
+            display: none;
             @include respond(telefono){
                 display: block;
                 position: absolute;
                 top: 0;
                 height: 5rem;
-                background-color: rgba(0, 0,0,0.1);
                 width: 100%;
-        
-              //  display: none;
+
             }
     
             & img{
