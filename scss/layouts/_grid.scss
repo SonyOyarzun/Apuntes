@@ -2,37 +2,16 @@ body{
 
 }
 main{
-& label{
-    width: 100%;
- //   border: 3px red ridge;  
-}
 
 #boton{
-    position: absolute;
+    position: fixed;
     display: none;
-    width: 100%;
+    
 
     
-    & button{
-        position: absolute;
-        width: 100%;
-        right: 0;
-        height: 5rem;
-        border-radius: 4px;
-        font-size: 3rem;
-        z-index: 2;
-
-        box-shadow: 0 0 20px #4f9;
-
-        width: 100%;
-        & img{
-            position: absolute;
-            width: 50%;
-            height: 50%;
-        }
-    }
+   
     @include respond(telefono){
-        display: inline;
+        display: block;
         position: absolute;
         top: 0;
         height: 5rem;
@@ -83,6 +62,26 @@ grid-template-areas:
         @include respond(telefono){
             display: block;
         }
+
+        & button{
+            width: 100%;
+            right: 0;
+            height: 5rem;
+            border-radius: 4px;
+            font-size: 3rem;
+            z-index: 2;
+    
+            box-shadow: 0 0 20px #4f9;
+    
+            width: 100%;
+    
+            & img{
+                position: absolute;
+                width: 50%;
+                height: 50%;
+            }
+        }
+        
         & ul{
         display: flex;
         list-style: none;

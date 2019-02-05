@@ -195,29 +195,12 @@ main {
   grid-column-gap: 2.5%;
   min-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
-  main label {
-    width: 100%; }
   main #boton {
-    position: absolute;
-    display: none;
-    width: 100%; }
-    main #boton button {
-      position: absolute;
-      width: 100%;
-      right: 0;
-      height: 5rem;
-      border-radius: 4px;
-      font-size: 3rem;
-      z-index: 2;
-      box-shadow: 0 0 20px #4f9;
-      width: 100%; }
-      main #boton button img {
-        position: absolute;
-        width: 50%;
-        height: 50%; }
+    position: fixed;
+    display: none; }
     @media only screen and (max-width: 37.5em) {
       main #boton {
-        display: inline;
+        display: block;
         position: absolute;
         top: 0;
         height: 5rem;
@@ -241,6 +224,19 @@ main {
     @media only screen and (max-width: 37.5em) {
       main .barra {
         display: block; } }
+    main .barra button {
+      width: 100%;
+      right: 0;
+      height: 5rem;
+      border-radius: 4px;
+      font-size: 3rem;
+      z-index: 2;
+      box-shadow: 0 0 20px #4f9;
+      width: 100%; }
+      main .barra button img {
+        position: absolute;
+        width: 50%;
+        height: 50%; }
     main .barra ul {
       display: flex;
       list-style: none; }
