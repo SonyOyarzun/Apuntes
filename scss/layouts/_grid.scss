@@ -3,18 +3,19 @@ body{
 }
 main{
 & label{
-    width: 100%;
-    border: 3px red ridge;  
+  //  width: 100%;
+ //   border: 3px red ridge;  
 }
 
 #boton{
     position: absolute;
     display: none;
- //   width: 100%;
+    width: 100%;
 
     
     & button{
         position: absolute;
+        width: 100%;
         right: 0;
         height: 5rem;
         border-radius: 4px;
