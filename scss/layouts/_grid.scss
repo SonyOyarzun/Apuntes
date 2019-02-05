@@ -9,7 +9,7 @@ main{
 
 #boton{
     position: absolute;
- //   display: none;
+    display: none;
     width: 100%;
 
     
@@ -38,6 +38,8 @@ main{
         height: 5rem;
         background-color: rgba(0, 0,0,0.1);
         width: 100%;
+
+        display: none;
     }
 }    
 
@@ -46,7 +48,7 @@ grid-template-columns   : 100%;
 grid-template-rows      : 5rem 50rem 120rem 35rem; 
 grid-row-gap: 0%;   
 grid-column-gap: 2.5%;   
-max-width: 100%;
+min-width: 100%;
 
 grid-template-areas: 
     " barra "
