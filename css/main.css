@@ -195,17 +195,6 @@ main {
   grid-column-gap: 2.5%;
   min-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
-  main #boton {
-    position: fixed;
-    display: none; }
-    @media only screen and (max-width: 37.5em) {
-      main #boton {
-        display: block;
-        position: absolute;
-        top: 0;
-        height: 5rem;
-        background-color: rgba(0, 0, 0, 0.1);
-        width: 100%; } }
   @media only screen and (max-width: 56.25em) {
     main {
       display: grid;
@@ -216,6 +205,7 @@ main {
       grid-template-areas: " barra " " hero " " cont " " footer "; } }
   main .barra {
     grid-area: barra;
+    position: fixed;
     display: flex;
     list-style: none;
     font-size: 2rem;
@@ -233,6 +223,14 @@ main {
       z-index: 2;
       box-shadow: 0 0 20px #4f9;
       width: 100%; }
+      @media only screen and (max-width: 37.5em) {
+        main .barra button {
+          display: block;
+          position: absolute;
+          top: 0;
+          height: 5rem;
+          background-color: rgba(0, 0, 0, 0.1);
+          width: 100%; } }
       main .barra button img {
         position: absolute;
         width: 50%;
