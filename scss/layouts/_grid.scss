@@ -42,6 +42,7 @@ grid-template-areas:
         font-size: 2rem;
         margin: 0;
         align-items: center;
+
  
         @include respond(telefono){
             display: block;
@@ -82,6 +83,8 @@ grid-template-areas:
         & ul{
         display: flex;
         list-style: none;
+
+       
         @include respond(telefono){
         display: inline;    
         flex-flow: column;
@@ -98,7 +101,9 @@ grid-template-areas:
             & li{  
                 margin: 4rem;
                 cursor: pointer;
-                color: blueviolet;
+                color: white;
+
+
                 @include respond(telefono){
                     position: relative;
                     text-align: center;
@@ -169,7 +174,7 @@ grid-template-areas:
         background-color: rgba(255, 255,255, 0.5);
         position: relative;    
         grid-area: hero;   
-        background: rgba(255, 0, 0, 0.2);
+        background: rgba(255, 0, 0, 0);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;  
@@ -178,6 +183,7 @@ grid-template-areas:
         & .header{
             position: absolute;
             @include centrar;
+            text-align: center;
             //border-radius: 1%;  
             //border: 3px red ridge;   
          
@@ -206,7 +212,8 @@ grid-template-areas:
               //  0px -30px 14px #0A7BFF;
                 
                 font-size: 10rem;
-                font-family:'Monster';
+                font-family:'Matrix';
+                color: white;
                 @include respond(telefono){
                     @include centrar;
                     font-size: 5rem;

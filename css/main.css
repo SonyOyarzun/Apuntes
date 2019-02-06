@@ -184,8 +184,8 @@ body {
   color: black; }
 
 @font-face {
-  font-family: 'Monster';
-  src: url("/fuentes/terror/mrsmonster.ttf") format("opentype"); }
+  font-family: 'Matrix';
+  src: url("/fuentes/matrix.ttf") format("opentype"); }
 
 main {
   display: grid;
@@ -251,7 +251,7 @@ main {
       main .barra ul li {
         margin: 4rem;
         cursor: pointer;
-        color: blueviolet; }
+        color: white; }
         @media only screen and (max-width: 37.5em) {
           main .barra ul li {
             position: relative;
@@ -310,7 +310,7 @@ main {
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
     grid-area: hero;
-    background: rgba(255, 0, 0, 0.2);
+    background: rgba(255, 0, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -322,6 +322,7 @@ main {
       top: 50%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
+      text-align: center;
       width: 60rem;
       height: 20rem; }
       main .hero .header video {
@@ -336,7 +337,8 @@ main {
         /* Subida del fuego */
         /* Azuleo de la llama */
         font-size: 10rem;
-        font-family: 'Monster'; }
+        font-family: 'Matrix';
+        color: white; }
         @media only screen and (max-width: 37.5em) {
           main .hero .header p {
             position: absolute;

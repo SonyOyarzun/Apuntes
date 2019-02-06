@@ -9,8 +9,14 @@ if( validar === false){
 }
 
 function ref(local){
+  if(local==0){
+    location.href = "index.html";
+  }
   if(local==1){
-    location.href = "https://www.google.com/";
+    location.href = "sonido.html";
+  }
+  if(local==2){
+    location.href = "index.html";
   }
  
 }
