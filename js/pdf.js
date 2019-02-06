@@ -285,3 +285,37 @@ function recinto(embed){
         document.getElementById("embed1").src="Documentos2/Recinto de Altavoces/Guias recinto/guia03_br.pdf";
     }
 }
+
+function refuerzo(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 2 Intro.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/CLASE 4 CROSSOVER.pdf";
+    }
+    if(embed==2){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 6 Etapa Potencia.pdf";
+    }
+    if(embed==3){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 6 Etapa Potencia II.pdf";
+    }
+    if(embed==4){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 7 - Arreglo subs.pdf";
+    }
+    if(embed==5){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 8 - Comportamientos de Sistemas.pdf";
+    }
+    if(embed==6){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 10 -  Nivelacin sistema.pdf";
+    }
+    if(embed==7){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Clase 11 -  Herramientas de Medicin.pdf";
+    }
+    if(embed==8){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Consolas 1.pdf";
+    }
+    if(embed==9){
+        document.getElementById("embed1").src="Documentos2/Refuerzo Sonoro/Consolas 2.pdf";
+    }
+}
