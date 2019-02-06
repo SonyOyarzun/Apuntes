@@ -195,6 +195,30 @@ main {
   grid-column-gap: 2.5%;
   min-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
+  main img {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      main img {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: -10;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%); } }
+  main video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -10;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); }
   @media only screen and (max-width: 56.25em) {
     main {
       display: grid;
@@ -282,30 +306,6 @@ main {
         background-color: blue;
         height: 0;
         z-index: 1; } }
-  main img {
-    display: none; }
-    @media only screen and (max-width: 37.5em) {
-      main img {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        z-index: -10;
-        min-width: 100%;
-        min-height: 100%;
-        width: 100%;
-        height: 100%;
-        transform: translate(-50%, -50%); } }
-  main video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: -10;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%); }
   main .hero {
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -369,10 +369,15 @@ main {
         width: 5rem;
         height: 5rem; }
         main .footer .columna .elemento img {
+          display: block;
           position: relative;
           border-radius: 50%;
           width: 100%;
           height: 100%; }
+          @media only screen and (max-width: 37.5em) {
+            main .footer .columna .elemento img {
+              display: block;
+              z-index: 0; } }
         main .footer .columna .elemento p {
           position: relative;
           top: 20%;
