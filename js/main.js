@@ -14,3 +14,4 @@ loadScript('js/pdf.js','pdf');
 loadScript('js/flechas.js','flechas');
 loadScript('js/menu.js','menu');
 loadScript('js/botones.js','botones');
+loadScript('js/responsive.js','responsive');
