@@ -1,6 +1,13 @@
 //http://rogerdudler.github.io/git-guide/index.es.html
 //https://github.com/cmusatyalab/openface
 //https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS
+
+function estadist(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="documentos/ESTADISTICAS/Informe F.pdf";
+    }
+}
 function appWeb(embed){
    
     if(embed==0){
@@ -127,7 +134,20 @@ function ingles(embed){
 }
 
 
-//SONIDO
+/////////////////////////////////////////////SONIDO
+
+
+function proyect(embed){
+   
+    if(embed==0){
+        document.getElementById("embed1").src="Documentos2/Proyecto de Titulo/REV2.pdf";
+    }
+    if(embed==1){
+        document.getElementById("embed1").src="Documentos2/Proyecto de Titulo/Proyecto de titulo Sony Oyarzun correg.pdf";
+    }
+}
+
+
 
 function acondAcust(embed){
    
