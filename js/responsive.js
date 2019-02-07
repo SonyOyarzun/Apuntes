@@ -5,13 +5,14 @@
     var x = document.querySelectorAll("a");
 
     for(var i = 0;i<x.length;i++){
-   //     x[i].style.backgroundColor = "red"; 
-    x[i].href = "/http://docs.google.com/gview?embedded=true&url=YOUR_URL_HERE&amp";
+   
+     x[i].style.backgroundColor = "red"; 
+    //x[i].href = "/http://docs.google.com/gview?embedded=true&url=YOUR_URL_HERE&amp";
     }
 
     } else {
       // mediaquery no es 600
-      
+
     }
  
 
