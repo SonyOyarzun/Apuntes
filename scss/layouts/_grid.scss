@@ -296,7 +296,7 @@ grid-template-areas:
 
     @include respond(telefono){
         grid-template-columns: 60rem; 
-        grid-template-rows      : 5rem 35rem 120rem 25rem; 
+        grid-template-rows      : 5rem 35rem 50rem 25rem; 
   
        }
 }
