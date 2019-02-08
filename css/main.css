@@ -450,7 +450,7 @@ main {
   .contenedor .item-2 {
     grid-area: item-2;
     background-color: rgba(255, 255, 255, 0); }
-    .contenedor .item-2 object {
+    .contenedor .item-2 embed {
       height: 95%;
       box-shadow: 8px 8px 8px black; }
   .contenedor .item-3 {
