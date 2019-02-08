@@ -140,7 +140,7 @@ function ingles(embed){
 function proyect(embed){
    
     if(embed==0){
-        document.getElementById("embed1").data="Documentos2/Proyecto de Titulo/REV2.pdf";
+        document.getElementById("embed1").src="Documentos2/Proyecto de Titulo/REV2.pdf";
     }
     if(embed==1){
         document.getElementById("embed1").src="Documentos2/Proyecto de Titulo/Proyecto de titulo Sony Oyarzun correg.pdf";
