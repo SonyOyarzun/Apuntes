@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+
+     <!-- TRACKING --->
+  <link rel="stylesheet" href="tracking.js-master/examples/assets/demo.css">
+  <script src="tracking.js-master/build/tracking-min.js"></script>
+  <script src="tracking.js-master/build/data/face-min.js"></script>
+  <script src="tracking.js-master/node_modules/dat.gui/build/dat.gui.min.js"></script>
+  <script src="tracking.js-master/assets/stats.min.js"></script>
+
+    
+</head>
+<body>
+    <div class="exterior">
+      
+            <video autoplay="true" id="videobg" src="video/Estrellas.mp4"></video>
+       <!--      <img src="imagenes/Sonido.gif" style="scale: .5"> --->  
+            <input id="menu" type="checkbox" style="display: none">
+        
+        <div  class="barra">
+
+               <button class="bubbly-button" onclick="visibilidad()">Menu</button> 
+               
+            <ul>
+                <li onclick="ref(0)">Programacion</li>
+                <li onclick="ref(1)">Sonido</li>
+                <li onclick="ref(2)">Proyecto</li>    
+            </ul> 
+        </div>
+                 
+
+                
+            
+            <div class="hero">
+                <div class="header">
+                        <p>Proyecto</p>
+                </div>
+
+            </div>
+
+            
+     <div class="contenedor2">
+   
+            <div class="item-1">
+                <button id="startbutton">Take photo</button>
+            </div>
+
+            <div class="item-2">
+
+                <video id="video"></video>
+                <canvas id="canvas"></canvas>
+        <!--      <img src="http://placekitten.com/g/320/261" id="photo" alt="photo"> -->  
+
+            </div>
+
+     </div>   
+     <div class="footer">
+<div class="columna">
+        <h6>Contacto</h6>
+        <div class="elemento"> <img src="imagenes/facebook.jpg" alt=""> <p>Sony&nbsp;Oyarzun</p></div>
+        <div class="elemento"> <img src="imagenes/whatsapp.jpg" alt=""> <p>9&nbsp;980&nbsp;194&nbsp;82</p></div> 
+        <div class="elemento"> <img src="imagenes/correo.jpg" alt=""> <p>sony.oyarzun@gmail.com</p></div>
+</div>
+<div class="columna">
+        <h6>Tutoriales Externos</h6>
+        <div class="elemento"> <img src="imagenes/github.jpg" alt=""> <a href="http://rogerdudler.github.io/git-guide/index.es.html">Git&nbsp;Hub</a></div>
+        <div class="elemento"> <img src="imagenes/IA.jpg" alt="">  <a href="https://github.com/cmusatyalab/openface">Open&nbsp;Face</a></div> 
+        <div class="elemento"> <img src="imagenes/css.jpg" alt=""> <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS">Animaciones&nbsp;Css</a></div>
+</div>
+    
+     </div>
+    </div>
+</body>
+<script>
+        window.onload = function() {
+          var video = document.getElementById('video');
+          var canvas = document.getElementById('canvas');
+          var context = canvas.getContext('2d');
+          var tracker = new tracking.ObjectTracker('face');
+          tracker.setInitialScale(4);
+          tracker.setStepSize(2);
+          tracker.setEdgesDensity(0.1);
+          tracking.track('#video', tracker, { camera: true });
+          tracker.on('track', function(event) {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            event.data.forEach(function(rect) {
+              context.strokeStyle = '#a64ceb';
+              context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+              context.font = '11px Helvetica';
+              context.fillStyle = "#fff";
+              context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
+              context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
+            });
+          });
+          var gui = new dat.GUI();
+          gui.add(tracker, 'edgesDensity', 0.1, 0.5).step(0.01);
+          gui.add(tracker, 'initialScale', 1.0, 10.0).step(0.1);
+          gui.add(tracker, 'stepSize', 1, 5).step(0.1);
+        };
+      </script>
+
+</html>

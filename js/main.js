@@ -15,3 +15,4 @@ loadScript('js/flechas.js','flechas');
 loadScript('js/menu.js','menu');
 loadScript('js/botones.js','botones');
 loadScript('js/responsive.js','responsive');
+loadScript('js/webcam.js','webcam');
