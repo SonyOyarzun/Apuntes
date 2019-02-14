@@ -1,4 +1,4 @@
-
+/*
 var video = document.querySelector("#video");
 
 if (navigator.mediaDevices.getUserMedia) {       
@@ -10,7 +10,7 @@ if (navigator.mediaDevices.getUserMedia) {
     console.log("Something went wrong!");
   });
 }
-
+*/
 
 $(document).ready(function() {
     run()

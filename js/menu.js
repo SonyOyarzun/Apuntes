@@ -16,7 +16,7 @@ function ref(local){
     location.href = "sonido.html";
   }
   if(local==2){
-    location.href = "index.html";
+    location.href = "proyecto.html";
   }
  
 }

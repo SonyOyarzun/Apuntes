@@ -729,19 +729,32 @@ main {
         box-shadow: 0 0 20px rgba(201, 221, 22, 0.5);
         background-color: rgba(201, 221, 22, 0.5); }
   .contenedor2 .item-2 {
-    position: relative;
     grid-area: item-2;
-    background-color: rgba(255, 255, 255, 0); }
-    .contenedor2 .item-2 #video {
-      position: absolute;
-      height: 95%;
-      width: 65%;
-      box-shadow: 8px 8px 8px black; }
-    .contenedor2 .item-2 #canvas {
-      display: block;
-      position: absolute;
-      height: 95%;
-      width: 65%; }
+    background-color: rgba(255, 255, 255, 0);
+    /*
+    #video, #canvas {
+         margin-left: 230px; 
+         margin-top: 120px; 
+         position: absolute; 
+    }
+  */
+    /*
+    & #canvas{
+        position: absolute;
+        height: 240px;
+        width: 320px;
+       // box-shadow: 8px 8px 8px black;
+    }
+
+    & #video{
+        position: absolute;
+        height: 98%;
+        width: 65%;
+        box-shadow: 8px 8px 8px black;
+    }
+    */ }
+    .contenedor2 .item-2 video, .contenedor2 .item-2 canvas {
+      position: absolute; }
     .contenedor2 .item-2 #photo {
       position: absolute;
       height: 95%;
