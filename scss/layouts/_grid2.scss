@@ -398,46 +398,24 @@ grid-template-areas:
         }
     }
     & .item-2{
-    //position: relative;    
+    position: relative;    
     grid-area: item-2; 
     background-color: rgba(255, 255,255, 0);  
 
-    
-
-
-    & video,canvas{
-        position: absolute;
-      
-    }
-/*
-    #video, #canvas {
-         margin-left: 230px; 
-         margin-top: 120px; 
-         position: absolute; 
-    }
-  */
-
-  /*
     & #canvas{
         position: absolute;
-        height: 240px;
-        width: 320px;
+ //       height: 100%;
+ //       width: auto;
        // box-shadow: 8px 8px 8px black;
     }
 
     & #video{
         position: absolute;
-        height: 98%;
-        width: 65%;
+ //       height: 96%;
+ //       width: 65%;
         box-shadow: 8px 8px 8px black;
     }
-    */
-    & #photo{
-        position: absolute;
-        height: 95%;
-        width: 65%;
-        box-shadow: 8px 8px 8px black;
-    }
+    
     
     }
     & .item-3{
