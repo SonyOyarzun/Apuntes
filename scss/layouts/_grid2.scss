@@ -395,6 +395,8 @@ grid-template-areas:
     grid-area: item-2; 
     background-color: rgba(255, 255,255, 0);  
 
+    
+
 
     & #video{
         position: absolute;
@@ -403,10 +405,10 @@ grid-template-areas:
         box-shadow: 8px 8px 8px black;
     }
     & #canvas{
+        display: block;
         position: absolute;
         height: 95%;
         width: 65%;
-        box-shadow: 8px 8px 8px black;
     }
     & #photo{
         position: absolute;
@@ -440,4 +442,3 @@ border: 1rem;
 border-color: black;
 
 }
-    

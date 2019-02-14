@@ -11,7 +11,7 @@ if (navigator.mediaDevices.getUserMedia) {
   });
 }
 
-/*
+
 $(document).ready(function() {
     run()
   })
@@ -23,7 +23,7 @@ $(document).ready(function() {
     
     // try to access users webcam and stream the images
     // to the video element
-    const videoEl = document.getElementById('inputVideo')
+    const videoEl = document.getElementById('Video')
     navigator.getUserMedia(
       { video: {} },
       stream => videoEl.srcObject = stream,
@@ -31,9 +31,9 @@ $(document).ready(function() {
     )
   }
 
-*/
-
 /*
+
+
 (function() {
 
   var streaming = false,

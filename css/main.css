@@ -738,10 +738,10 @@ main {
       width: 65%;
       box-shadow: 8px 8px 8px black; }
     .contenedor2 .item-2 #canvas {
+      display: block;
       position: absolute;
       height: 95%;
-      width: 65%;
-      box-shadow: 8px 8px 8px black; }
+      width: 65%; }
     .contenedor2 .item-2 #photo {
       position: absolute;
       height: 95%;
