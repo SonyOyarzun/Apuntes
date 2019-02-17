@@ -689,7 +689,7 @@ main {
   grid-row-gap: 2%;
   grid-column-gap: 2.5%;
   max-width: 100%;
-  grid-template-areas: " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  " " item-1  item-2 item-2 item-2 item-2  "; }
+  grid-template-areas: " item-1  item-1 item-2 item-2 item-2  " " item-1  item-1 item-2 item-2 item-2  " " item-1  item-1 item-2 item-2 item-2  " " item-1  item-1 item-2 item-2 item-2  " " item-1  item-1 item-2 item-2 item-2  "; }
   @media only screen and (max-width: 56.25em) {
     .contenedor2 {
       grid-template-columns: 23rem 30rem 30rem;
@@ -701,6 +701,7 @@ main {
       grid-template-rows: 10rem 15rem;
       grid-template-areas: " item-1 item-1 " " item-2 item-2 "; } }
   .contenedor2 .item-1 {
+    position: relative;
     grid-area: item-1;
     overflow: auto;
     height: 95%;
@@ -708,15 +709,48 @@ main {
     display: flex;
     flex-flow: column;
     box-shadow: 8px 8px 8px black; }
+    .contenedor2 .item-1 .tarjeta {
+      display: flex;
+      background-color: black;
+      border-color: aquamarine; }
+      .contenedor2 .item-1 .tarjeta img {
+        position: relative;
+        width: 60%;
+        height: 60%; }
+      .contenedor2 .item-1 .tarjeta .botones {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin: 0%; }
+        .contenedor2 .item-1 .tarjeta .botones button {
+          position: relative;
+          width: 80%;
+          height: 40%;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -moz-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+          -ms-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+          -o-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+          -webkit-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+          transition: opacity 0.2s ease-in, top 0.2s ease-in;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+          font-size: 12px;
+          padding: 0 10px;
+          text-align: center;
+          top: 2%;
+          vertical-align: top;
+          white-space: nowrap;
+          margin: 10%; }
     .contenedor2 .item-1 h3 {
       color: black; }
       @media only screen and (max-width: 37.5em) {
         .contenedor2 .item-1 h3 {
           font-size: 2.5rem; } }
-    .contenedor2 .item-1 button {
-      width: 80%;
-      height: 5%;
-      margin-left: 2rem; }
     .contenedor2 .item-1 a {
       font-size: 1rem;
       margin: 3%;
@@ -732,11 +766,17 @@ main {
   .contenedor2 .item-2 {
     position: relative;
     grid-area: item-2;
-    background-color: rgba(255, 255, 255, 0); }
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%; }
     .contenedor2 .item-2 #canvas {
-      position: absolute; }
+      position: absolute;
+      z-index: -1;
+      height: 95%;
+      width: 95%; }
     .contenedor2 .item-2 #video {
       position: absolute;
+      height: 95%;
+      width: 95%;
       box-shadow: 8px 8px 8px black; }
   .contenedor2 .item-3 {
     grid-area: item-3; }

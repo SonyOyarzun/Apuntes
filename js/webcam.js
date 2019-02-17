@@ -73,7 +73,7 @@
         };
       
 function capturar(canvas,context){
-  video.pause();
+//  video.pause();
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -84,7 +84,7 @@ function capturar(canvas,context){
         
 function enviar(foto){
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "./guardar_foto.php", true);
+	xhr.open("POST", ".php/guardar_foto.php", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send(encodeURIComponent(foto)); //Codificar y enviar
  // alert("Imagen enviada");
