@@ -26,14 +26,9 @@
 
               ////////////////////////////
 
-              video.pause();
-			        canvas.width = video.videoWidth;
-				      canvas.height = video.videoHeight;
-              context.drawImage(video, 0, 0, canvas.width, canvas.height);
-              
-              var foto = canvas.toDataURL(); //Esta es la foto, en base 64
+              capturar(canvas,context);
 
-           document.getElementById("foto").src = foto;
+              enviar(foto);
              
 
             
@@ -77,3 +72,20 @@
           gui.add(tracker, 'stepSize', 1, 5).step(0.1);
         };
       
+function capturar(canvas,context){
+  video.pause();
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  var foto = canvas.toDataURL(); //Esta es la foto, en base 64
+  document.getElementById("foto").src = foto;
+  // alert("Imagen capturada");
+}
+        
+function enviar(foto){
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "./guardar_foto.php", true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.send(encodeURIComponent(foto)); //Codificar y enviar
+ // alert("Imagen enviada");
+}
