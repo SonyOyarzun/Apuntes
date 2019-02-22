@@ -28,7 +28,7 @@
 
               capturar(canvas,context);
 
-              enviar(foto);
+              enviar2(foto);
              
 
             
@@ -83,9 +83,65 @@ function capturar(canvas,context){
 }
         
 function enviar(foto){
+  
+  
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", ".php/guardar_foto.php", true);
+	xhr.open("POST", "php/guardar_foto.php", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send(encodeURIComponent(foto)); //Codificar y enviar
- // alert("Imagen enviada");
+  alert("Imagen enviada");
+  /*
+
+ //var parametros = {
+ // id : jQuery('#idUsuario').val(),
+ // nombre : jQuery('#nombreUsuario').val(),
+ // imagen : jQuery('#temporal').attr('src')
+//};
+
+
+
+ $.ajax('php/guardar_foto.php', {
+  type : 'post',
+  //data : parametros,
+  data : foto,
+  success : function(data) {
+    alert("enviando1");
+    if(data.error){
+      console.log('Error controlado.', data.mensaje);
+      return;
+    };
+    console.log('Imagen ' + foto.imagen + ' fue guardada.');
+    alert('Imagen ' + foto.imagen + ' fue guardada.');
+  },
+  error : function(data) {
+    console.log('Error no controlado.', data);
+    alert('Error no controlado.', data);
+  }
+  
+});
+alert("enviando2");
+
+
+*/
+}
+
+function enviar2(foto){
+  $.ajax({
+    type: 'POST',
+    url: 'php/guardar_foto.php',
+    data: {
+            imagen:foto
+          },
+    contentType: false,
+    cache: false,
+    processData:false,
+    success: function(msg){
+       alert(msg);
+    }
+    
+});
+
+
+
+
 }
