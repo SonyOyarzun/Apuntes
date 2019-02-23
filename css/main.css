@@ -716,7 +716,7 @@ main {
       .contenedor2 .item-1 .tarjeta img {
         position: relative;
         width: 60%;
-        height: 60%; }
+        height: 100%; }
       .contenedor2 .item-1 .tarjeta .botones {
         width: 100%;
         display: flex;
