@@ -27,7 +27,7 @@ window.onload = function() {
 
               capturar(canvas,context);
 
-              enviar2();
+              
 
          
 
@@ -47,14 +47,15 @@ window.onload = function() {
 
 
 function capturar(canvas,context){
+    console.log('capturando imagen');
 //  video.pause();
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
   var foto = canvas.toDataURL(); //Esta es la foto, en base 64
   document.getElementById("foto").src = foto;
-  // alert("Imagen capturada");
 
+  enviar2(foto);
 
 }
         
@@ -70,47 +71,32 @@ function enviar(foto){
 }
 
 
-function enviar2(){
+function enviar2(foto){
 
   // si usamos el metodo POST provoca error 405 Method Not Allowed asi usaremos GET
   // fuente https://airbrake.io/blog/http-errors/405-method-not-allowed
-
-  var request = $.ajax({
-    type: 'Get',
+    console.log('enviando imagen a BD');
+    
+    $.ajax({
+    type: 'POST',
     url: 'php/guardar_foto.php',
     data: {
         imagen: foto
-      },
-      contentType: false,
-      cache: false,
-      processData:false,
-    success: function(msg){ 
-     console.log(msg);
-    }  
-});
-
-request.done(function( data ) {
-  alert("Todo bien");
-  console.log(data); //Si pones el content-type en PHP no necesitas parse         
-});
-
-request.fail(function( jqXHR, textStatus ) {
-alert( "Hubo un error: " + textStatus );
-});
-
-
-}
-
-
-function enviar3(){
-
-  $.ajax({
-    url: 'php/guardar_foto.php',
-    success: function(respuesta) {
-      console.log(respuesta);
     },
-    error: function() {
-          console.log("No se ha podido obtener la información");
-      }
-  });
+
+    //  contentType: "application/json",
+    //  dataType: "json",
+     
+      success: function(msg){ 
+
+        console.log(msg);
+        console.log(foto);
+        
+    }  
+
+
+});
+
+
 }
+

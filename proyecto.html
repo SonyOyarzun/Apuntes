@@ -25,7 +25,7 @@
     
 </head>
 <body>
-    <form id="form1"  class="exterior">
+    <form id="form1"  class="exterior" method="POST" action="php/guardar_foto.php">
       
             <video autoplay="true" id="videobg" src="video/Estrellas.mp4"></video>
        <!--      <img src="imagenes/Sonido.gif" style="scale: .5"> --->  
@@ -57,11 +57,11 @@
    
             <div class="item-1">
                 <div class="tarjeta">
-                <img id="foto">
+                <img id="foto" name="imagen">
                <!-- <img id="foto" src='data:image/jpeg;base64{binary data}'> -->
                 <div class="botones">
-                        <button id="re" type="button" onclick="enviar3()">Buscar 1</button>
-                        <button type="button" >Buscar 2</button>
+                        <button type="button" onclick="enviar2(this)">Buscar 1</button>
+                        <button type="submit" >Buscar 2</button>
                         <button type="button" >Buscar 3</button>
                 </div>
                 </div>
