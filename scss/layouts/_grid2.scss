@@ -360,9 +360,6 @@ grid-template-areas:
 
     height: 95%;
 
-    background-color: rgba(255, 255,255, 0.8);
-    display: flex;  
-    flex-flow: column;
 
     box-shadow: 8px 8px 8px black;
 
@@ -370,30 +367,41 @@ grid-template-areas:
     display: flex;
     position: relative;
     background-color: black;
-    border-color: aquamarine;
+    height: 40%;
+    border: red 5px none;
+    border-style: outset;
 
+    label{
+    position: absolute;
+    background-color: #D2E0E6;
+    height: 10%;
+    width: 99%;
+    text-align: center;
+    border-style: inset;
+    }
+    
         img{
         position: absolute;
+        margin: 2%;
         width: 40%;
-      
-
+        left: 5%;
+        height: 80%;
+        padding: 2%;
+            top: 10%;
         }
 
     .botones{
         position: absolute;
-        width: 100%;
         display: flex;
         flex-flow: column;
-
-        margin: 0%;
-
+        left: 48%;
+        height: 80%;
+        width:50%;
+            top: 15%;
         button{
-        position: absolute;
+        position: relative;
         width: 80%;
         height: 100%;
-    
-
-     
 
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -416,7 +424,10 @@ grid-template-areas:
         top: 2%;
         vertical-align: top;
         white-space: nowrap;
-        margin: 10%;
+        
+        padding: 3%;
+        margin: 5%;
+        left: 10%;
         }
 
     }

@@ -73,6 +73,7 @@ include './php/Conexion.php';
                 ?>
                 
                 <div class='tarjeta'>   
+                <label><?php echo $row['nombre'] ?></label>    
                 <img id='foto' name='imagen' src='<?php echo $row['imagen'] ?>'>
                 <div class='botones'>
                     

@@ -705,26 +705,39 @@ main {
     grid-area: item-1;
     overflow: auto;
     height: 95%;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    flex-flow: column;
     box-shadow: 8px 8px 8px black; }
     .contenedor2 .item-1 .tarjeta {
       display: flex;
       position: relative;
       background-color: black;
-      border-color: aquamarine; }
+      height: 40%;
+      border: red 5px none;
+      border-style: outset; }
+      .contenedor2 .item-1 .tarjeta label {
+        position: absolute;
+        background-color: #D2E0E6;
+        height: 10%;
+        width: 99%;
+        text-align: center;
+        border-style: inset; }
       .contenedor2 .item-1 .tarjeta img {
         position: absolute;
-        width: 40%; }
+        margin: 2%;
+        width: 40%;
+        left: 5%;
+        height: 80%;
+        padding: 2%;
+        top: 10%; }
       .contenedor2 .item-1 .tarjeta .botones {
         position: absolute;
-        width: 100%;
         display: flex;
         flex-flow: column;
-        margin: 0%; }
+        left: 48%;
+        height: 80%;
+        width: 50%;
+        top: 15%; }
         .contenedor2 .item-1 .tarjeta .botones button {
-          position: absolute;
+          position: relative;
           width: 80%;
           height: 100%;
           -moz-box-sizing: border-box;
@@ -746,7 +759,9 @@ main {
           top: 2%;
           vertical-align: top;
           white-space: nowrap;
-          margin: 10%; }
+          padding: 3%;
+          margin: 5%;
+          left: 10%; }
     .contenedor2 .item-1 h3 {
       color: black; }
       @media only screen and (max-width: 37.5em) {

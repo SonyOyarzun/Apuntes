@@ -37,7 +37,7 @@ class Conexion {
     
     function mostrarTop($tabla){
      
-    $sql ="Select * From `$tabla` limit 1 ";
+    $sql ="Select * From `$tabla` limit 10 ";
     $query = mysqli_query($this->conectar(),$sql);
     $this->desconectar();
     
