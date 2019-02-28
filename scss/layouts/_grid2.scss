@@ -368,18 +368,19 @@ grid-template-areas:
 
     .tarjeta{
     display: flex;
+    position: relative;
     background-color: black;
     border-color: aquamarine;
 
         img{
-        position: relative;
-        width: 60%;
-        height: 100%;
+        position: absolute;
+        width: 40%;
+      
 
         }
 
     .botones{
-
+        position: absolute;
         width: 100%;
         display: flex;
         flex-flow: column;
@@ -387,9 +388,9 @@ grid-template-areas:
         margin: 0%;
 
         button{
-        position: relative;
+        position: absolute;
         width: 80%;
-        height: 40%;
+        height: 100%;
     
 
      

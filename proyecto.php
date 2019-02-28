@@ -1,3 +1,7 @@
+ <?php
+include './php/Conexion.php'; 
+//https://malnuer.es/css/como-configurar-netbeans-para-usar-sass-en-windows/
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,16 +59,36 @@
             
      <div class="contenedor2">
    
+         <!-- <img id="foto" src='data:image/jpeg;base64{binary data}'> -->
             <div class="item-1">
-                <div class="tarjeta">
-                <img id="foto" name="imagen">
-               <!-- <img id="foto" src='data:image/jpeg;base64{binary data}'> -->
-                <div class="botones">
-                        <button type="button" onclick="enviar2(this)">Buscar 1</button>
-                        <button type="submit" >Buscar 2</button>
-                        <button type="button" >Buscar 3</button>
+               <?php 
+                $conexion = new Conexion();
+                $tabla = 'tracking';
+                $arreglo = $conexion->mostrarTop($tabla);
+                 
+                if(mysqli_num_rows($arreglo)!== 0){
+                
+                while($row = mysqli_fetch_array($arreglo)){  
+                    
+                ?>
+                
+                <div class='tarjeta'>   
+                <img id='foto' name='imagen' src='<?php echo $row['imagen'] ?>'>
+                <div class='botones'>
+                    
+                <button type='button'>Buscar 1</button>
+                <button type='button'>Buscar 2</button>
+                <button type='button'>Buscar 3</button>
+               
                 </div>
                 </div>
+                   
+           
+            <?php
+                }
+ }
+                ?>
+                
             </div>
 
             <div class="item-2">

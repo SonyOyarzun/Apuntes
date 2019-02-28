@@ -27,10 +27,6 @@ window.onload = function() {
 
               capturar(canvas,context);
 
-              
-
-         
-
             /////////////////////////////////
             });
           });
@@ -53,8 +49,9 @@ function capturar(canvas,context){
   canvas.height = video.videoHeight;
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
   var foto = canvas.toDataURL(); //Esta es la foto, en base 64
-  document.getElementById("foto").src = foto;
-
+ // document.getElementById("foto").src = foto;
+  
+  console.log("foto :"+foto);
   enviar2(foto);
 
 }
