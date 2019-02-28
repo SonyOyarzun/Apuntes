@@ -14,7 +14,7 @@ grid-template-areas:
     " footer "
     ;
 
-    & img{ 
+    & #img{ 
     
          @include respond(telefono){
              display: block;
@@ -288,12 +288,12 @@ grid-template-areas:
 
     @include respond(tablet-v){
         grid-template-columns: 90rem;  
-        grid-template-rows      : 5rem 40rem 62rem 25rem; 
+        grid-template-rows      : 5rem 40rem 130rem 25rem; 
        }
 
     @include respond(telefono){
         grid-template-columns: 60rem; 
-        grid-template-rows      : 5rem 15rem 50rem 25rem; 
+        grid-template-rows      : 5rem 20rem 110rem 25rem; 
   
         grid-template-areas: 
             " barra "
@@ -327,28 +327,20 @@ grid-template-areas:
 
     @include respond(tablet-v){
         grid-template-columns   : 23rem 30rem 30rem;
-        grid-template-rows      : repeat(10,5rem); 
+        grid-template-rows      : 50rem 70rem;
         grid-template-areas: 
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-        " item-1  item-2 item-2 "
-
+        " item-2  item-2 item-2 "
+        " item-1  item-1 item-1 "
+    
         ;        
        }
 
     @include respond(telefono){
         grid-template-columns   : 27rem 27rem;
-        grid-template-rows      : 10rem 15rem;
+        grid-template-rows      : 40rem 65rem;
         grid-template-areas: 
-        " item-1 item-1 "
         " item-2 item-2 "
+        " item-1 item-1 "
         ;        
        }
 

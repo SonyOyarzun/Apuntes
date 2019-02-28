@@ -475,7 +475,7 @@ main {
   min-width: 100%;
   grid-template-areas: " barra " " hero " " cont " " footer "; }
   @media only screen and (max-width: 37.5em) {
-    .exterior img {
+    .exterior #img {
       display: block;
       position: fixed;
       top: 50%;
@@ -671,11 +671,11 @@ main {
   @media only screen and (max-width: 56.25em) {
     .exterior {
       grid-template-columns: 90rem;
-      grid-template-rows: 5rem 40rem 62rem 25rem; } }
+      grid-template-rows: 5rem 40rem 130rem 25rem; } }
   @media only screen and (max-width: 37.5em) {
     .exterior {
       grid-template-columns: 60rem;
-      grid-template-rows: 5rem 15rem 50rem 25rem;
+      grid-template-rows: 5rem 20rem 110rem 25rem;
       grid-template-areas: " barra " " hero " " cont " " footer "; } }
 
 .contenedor2 {
@@ -693,13 +693,13 @@ main {
   @media only screen and (max-width: 56.25em) {
     .contenedor2 {
       grid-template-columns: 23rem 30rem 30rem;
-      grid-template-rows: repeat(10, 5rem);
-      grid-template-areas: " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 " " item-1  item-2 item-2 "; } }
+      grid-template-rows: 50rem 70rem;
+      grid-template-areas: " item-2  item-2 item-2 " " item-1  item-1 item-1 "; } }
   @media only screen and (max-width: 37.5em) {
     .contenedor2 {
       grid-template-columns: 27rem 27rem;
-      grid-template-rows: 10rem 15rem;
-      grid-template-areas: " item-1 item-1 " " item-2 item-2 "; } }
+      grid-template-rows: 40rem 65rem;
+      grid-template-areas: " item-2 item-2 " " item-1 item-1 "; } }
   .contenedor2 .item-1 {
     position: relative;
     grid-area: item-1;
