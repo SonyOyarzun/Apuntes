@@ -19,13 +19,15 @@ include './php/Conexion.php';
     <script src="js/tomarFoto.js"></script>
     
 
-     <!-- TRACKING --->
+     <!-- TRACKING -->
   <link rel="stylesheet" href="tracking.js-master/examples/assets/demo.css">
   <script src="tracking.js-master/build/tracking-min.js"></script>
   <script src="tracking.js-master/build/data/face-min.js"></script>
-  <script src="tracking.js-master/node_modules/dat.gui/build/dat.gui.min.js"></script>
+  <script src="dat.gui-master/build/dat.gui.min.js"></script>
   <script src="tracking.js-master/assets/stats.min.js"></script>
 
+   
+    
     
 </head>
 <body>
@@ -94,16 +96,8 @@ include './php/Conexion.php';
 
             <div class="item-2">
 
-                <video id="video" width="320" height="240" preload="" autoplay="" loop="" muted="" src="blob:https://trackingjs.com/06162111-dd27-42b1-9ea3-30ff8793bafb"></video>
-                <canvas id="canvas" width="320" height="240"></canvas>
-               
-
-                  <!--
-                  <video id="video" preload autoplay loop muted></video>
-                  <canvas id="canvas" ></canvas>
-                  -->
-               
-         
+                <video id="video"  preload="" autoplay="" loop="" muted=""></video>
+                <canvas id="canvas" width="40rem" height="20rem" ></canvas>
 
             </div>
 
@@ -125,6 +119,5 @@ include './php/Conexion.php';
      </div>
     </form>
 </body>
-
 
 </html>

@@ -40,21 +40,6 @@ grid-template-areas:
          }   
 
 
-    @include respond(tablet-v){
-        display: grid;
-        grid-template-columns   : 100%;
-        grid-template-rows      : 5rem 50rem 120rem 35rem; 
-        grid-row-gap: 0%;   
-        grid-column-gap: 2.5%;   
-
-        grid-template-areas: 
-            " barra "
-            " hero "
-            " cont "
-            " footer "
-            ;
-               
-       }
 
        
 
@@ -197,20 +182,7 @@ grid-template-areas:
                 height: 100%;
                 width: 100%; 
             }
-            & p{
-                
-                /* Primer resplandor */
-               // text-shadow: 0px 0px 10px #FFF,
-                /* Parte de luz */
-              //  4px 2px 12px #DCB500,
-               // -4px 2px 12px #DCB500,
-                /* Subida del fuego */
-              //  0px -6px 14px #FF7A00,
-              //  0px -12px 14px #FF6300,
-              //  0px -20px 14px #FF4400,
-                /* Azuleo de la llama */
-              //  0px -30px 14px #0A7BFF;
-                
+            & p{                
                 font-size: 10rem;
                 font-family:'Matrix';
                 color: white;
@@ -314,7 +286,7 @@ grid-template-areas:
     grid-template-columns   : repeat(5,24rem);
     grid-template-rows      : repeat(5,10rem); 
     grid-row-gap: 2%;   
-    grid-column-gap: 2.5%;   
+    grid-column-gap: 4%;   
     max-width: 100%;
 
     grid-template-areas: 
@@ -349,12 +321,19 @@ grid-template-areas:
     position: relative;
     grid-area: item-1;
     overflow: auto;
-
     height: 95%;
-
-
     box-shadow: 8px 8px 8px black;
 
+       @include respond(tablet-v){
+        width: 70.3%;  
+        @include margentablet;
+       }
+
+        @include respond(telefono){
+        width: 90%; 
+         @include margenfono;
+       }
+    
     .tarjeta{
     display: flex;
     position: relative;
@@ -461,19 +440,23 @@ grid-template-areas:
     background-color: rgba(255, 255,255, 0);  
     width: 100%;
 
-    & #canvas{
-        position: absolute;
-        z-index: -1;
-        height: 95%;
-        width: 95%;
-       // box-shadow: 8px 8px 8px black;
-    }
-
-    & #video{
+    & #video,#canvas{
         position: absolute;
         height: 95%;
-        width: 95%;
+        width: 83.7%;
         box-shadow: 8px 8px 8px black;
+        
+        @include respond(tablet-v){
+        height: 95%;
+        width: 70.3%;  
+        @include margentablet;
+       }
+
+        @include respond(telefono){
+        height: 95%;
+        width: 90%;
+        @include margenfono;
+       }
     }
     
     

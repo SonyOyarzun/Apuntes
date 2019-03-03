@@ -37,7 +37,7 @@ class Conexion {
     
     function mostrarTop($tabla){
      
-    $sql ="Select * From `$tabla` order by nombre DESC";
+    $sql ="Select * From `$tabla` order by nombre DESC limit 10";
     $query = mysqli_query($this->conectar(),$sql);
     $this->desconectar();
     

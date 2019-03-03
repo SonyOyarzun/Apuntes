@@ -52,3 +52,9 @@ transform: translate(-50%, -50%);
     position: absolute;    
     top: 50%;
     }
+@mixin margentablet {   
+    margin-left: 10%;
+    }
+@mixin margenfono {   
+    margin-left: 3%;
+    }    
